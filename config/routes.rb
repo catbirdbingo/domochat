@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :profile, only: [:show, :update, :edit]
+  resource :profile, only: [:show, :update, :edit]
   resources :flats
   resources :posts
 
