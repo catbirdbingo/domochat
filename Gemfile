@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.0'
+gem 'sinatra', github: 'sinatra/sinatra', :require => false
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -29,9 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise', '4.1.1'
 gem 'devise_invitable'
 gem "pundit"
 gem "rolify"
@@ -40,8 +41,17 @@ gem 'simple_form'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'carrierwave'
+
 gem 'sidekiq'
+
+gem 'faye'
+gem 'thin', require: false
+gem 'render_sync'
+
+gem 'carrierwave'
+
+gem 'rack', '~> 2.0.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
